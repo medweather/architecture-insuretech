@@ -1,0 +1,41 @@
+schema {
+  query: Query
+}
+
+type Query {
+  "Получить информацию о клиенте по ID"
+  client(id: ID!): Client
+
+  "Список документов клиента"
+  documents(clientId: ID!): [Document!]!
+
+  "Информация о родственниках клиента"
+  relatives(clientId: ID!): [Relative!]!
+}
+
+type Client {
+  id: ID!
+  name: String
+  age: Int
+
+  "Документы клиента (заменяет отдельный запрос /clients/{id}/documents)"
+  documents: [Document!]!
+
+  "Родственники клиента (заменяет отдельный запрос /clients/{id}/relatives)"
+  relatives: [Relative!]!
+}
+
+type Document {
+  id: ID!
+  type: String
+  number: String
+  issueDate: String
+  expiryDate: String
+}
+
+type Relative {
+  id: ID!
+  relationType: String
+  name: String
+  age: Int
+}

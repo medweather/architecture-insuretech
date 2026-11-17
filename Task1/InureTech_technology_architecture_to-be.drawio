@@ -1,0 +1,255 @@
+<mxfile host="Electron" agent="opencode">
+  <diagram id="insuretech-to-be-task1" name="To-Be - Task1">
+    <mxGraphModel dx="1314" dy="985" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1880" pageHeight="1720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="client" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fontFamily=Arial;fillColor=#08427B;fontColor=#FFFFFF;strokeColor=#073B5C;fontSize=14;fontStyle=1;verticalAlign=middle;" value="&lt;b&gt;Клиент&lt;/b&gt;&lt;br&gt;[Person]" vertex="1">
+          <mxGeometry height="70" width="200" x="40" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="partners" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fontFamily=Arial;fillColor=#8C8C8C;fontColor=#FFFFFF;strokeColor=#787878;fontSize=13;verticalAlign=middle;" value="&lt;b&gt;Системы партнёров&lt;/b&gt;&lt;br&gt;[Software System]" vertex="1">
+          <mxGeometry height="70" width="220" x="1600" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="payment" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fontFamily=Arial;fillColor=#8C8C8C;fontColor=#FFFFFF;strokeColor=#787878;fontSize=13;verticalAlign=middle;" value="&lt;b&gt;Платёжный сервис&lt;/b&gt;&lt;br&gt;[Software System]" vertex="1">
+          <mxGeometry height="80" width="220" x="1600" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="insurers" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fontFamily=Arial;fillColor=#8C8C8C;fontColor=#FFFFFF;strokeColor=#787878;fontSize=13;verticalAlign=middle;" value="&lt;b&gt;Системы страховых&lt;br&gt;компаний&lt;/b&gt; [Software System]" vertex="1">
+          <mxGeometry height="90" width="220" x="1600" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="dns" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;Cloud DNS&lt;/b&gt;&lt;br&gt;failover" vertex="1">
+          <mxGeometry height="80" width="180" x="300" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;CDN&lt;/b&gt;&lt;br&gt;кэш статики" vertex="1">
+          <mxGeometry height="80" width="180" x="510" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="static" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;Object Storage&lt;/b&gt;&lt;br&gt;статика / бэкапы" vertex="1">
+          <mxGeometry height="80" width="180" x="720" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="alb" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;Application Load Balancer&lt;/b&gt;&lt;br&gt;L7 · health-check" vertex="1">
+          <mxGeometry height="80" width="220" x="980" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="apigw" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;API Gateway + WAF&lt;/b&gt;&lt;br&gt;квоты 20 RPS" vertex="1">
+          <mxGeometry height="80" width="220" x="1230" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="az_a" parent="1" style="fillColor=#e3ebff;strokeColor=#9db9ff;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;verticalAlign=top;align=center;fontSize=15;fontStyle=1;spacingTop=6;" value="Зона доступности ru-central1-a" vertex="1">
+          <mxGeometry height="620" width="386" x="300" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_a" parent="1" style="fillColor=none;strokeColor=#5282ff;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;verticalAlign=top;align=left;fontSize=12;fontStyle=1;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="300" width="356" x="315" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="k8s_a" parent="1" style="shape=image;imageAspect=0;aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=group;container=0;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="324" y="442" as="geometry" />
+        </mxCell>
+        <mxCell id="cllbl_a" parent="1" style="text;html=1;whiteSpace=wrap;fontFamily=Arial;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#1A3A8F;" value="&lt;b&gt;Kubernetes cluster&lt;/b&gt; — node group ru-central1-a" vertex="1">
+          <mxGeometry height="36" width="300" x="362" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="core_a" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;core-app&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="325" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="ci_a" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;client-info&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="500" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="agg_a" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;ins-product-aggregator&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="325" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="se_a" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;ins-comp-settlement&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="500" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="db_a" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=left;verticalAlign=middle;spacingLeft=6;" value="&lt;div style=&#39;text-align:left;padding-left:44px&#39;&gt;&lt;b&gt;PostgreSQL&lt;/b&gt; — MASTER&lt;br&gt;core-db · client-info · settlement&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="356" x="315" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_a" parent="1" style="shape=image;imageAspect=0;aspect=fixed;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIiBmaWxsPSJub25lIj4mI3hhOzxwYXRoIGQ9Ik0wIDE2QzAgNy4xNjM0NCA3LjE2MzQ0IDAgMTYgMFYwQzI0LjgzNjYgMCAzMiA3LjE2MzQ0IDMyIDE2VjE2QzMyIDI0LjgzNjYgMjQuODM2NiAzMiAxNiAzMlYzMkM3LjE2MzQ0IDMyIDAgMjQuODM2NiAwIDE2VjE2WiIgZmlsbD0iIzUyODJGRiIvPiYjeGE7PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMyA4SDE4QzIxLjMgOCAyNCAxMC43IDI0IDE0VjI0SDIwVjIwSDIyVjE5SDE4LjZDMTUuNSAxOSAxMyAxNi41IDEzIDEzLjRWOFpNMTkgMTdIMjFWMTVIMTlWMTdaTTEyIDkuMDk5OThWMTMuNEMxMiAxNi44IDE0LjYgMTkuNyAxOCAyMC4xVjIwLjZDMTggMjIgMTUuOCAyMy4xIDEzIDIzLjFDMTAuMiAyMy4xIDggMjIgOCAyMC42VjExLjZDOCAxMC4zIDkuNyA5LjI5OTk4IDEyIDkuMDk5OThaIiBmaWxsPSJ3aGl0ZSIvPiYjeGE7PC9zdmc+;" value="" vertex="1">
+          <mxGeometry height="36" width="32" x="324" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="az_b" parent="1" style="fillColor=#e3ebff;strokeColor=#9db9ff;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;verticalAlign=top;align=center;fontSize=15;fontStyle=1;spacingTop=6;" value="Зона доступности ru-central1-b" vertex="1">
+          <mxGeometry height="620" width="386" x="716" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_b" parent="1" style="fillColor=none;strokeColor=#5282ff;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;verticalAlign=top;align=left;fontSize=12;fontStyle=1;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="300" width="356" x="731" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="k8s_b" parent="1" style="shape=image;imageAspect=0;aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=group;container=0;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="740" y="442" as="geometry" />
+        </mxCell>
+        <mxCell id="cllbl_b" parent="1" style="text;html=1;whiteSpace=wrap;fontFamily=Arial;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#1A3A8F;" value="&lt;b&gt;Kubernetes cluster&lt;/b&gt; — node group ru-central1-b" vertex="1">
+          <mxGeometry height="36" width="300" x="778" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="core_b" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;core-app&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="741" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="ci_b" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;client-info&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="918" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="agg_b" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;ins-product-aggregator&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="741" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="se_b" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;ins-comp-settlement&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="918" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="db_b" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=left;verticalAlign=middle;spacingLeft=6;" value="&lt;div style=&#39;text-align:left;padding-left:44px&#39;&gt;&lt;b&gt;PostgreSQL&lt;/b&gt; — REPLICA&lt;br&gt;core-db · client-info · settlement&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="356" x="731" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_b" parent="1" style="shape=image;imageAspect=0;aspect=fixed;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIiBmaWxsPSJub25lIj4mI3hhOzxwYXRoIGQ9Ik0wIDE2QzAgNy4xNjM0NCA3LjE2MzQ0IDAgMTYgMFYwQzI0LjgzNjYgMCAzMiA3LjE2MzQ0IDMyIDE2VjE2QzMyIDI0LjgzNjYgMjQuODM2NiAzMiAxNiAzMlYzMkM3LjE2MzQ0IDMyIDAgMjQuODM2NiAwIDE2VjE2WiIgZmlsbD0iIzUyODJGRiIvPiYjeGE7PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMyA4SDE4QzIxLjMgOCAyNCAxMC43IDI0IDE0VjI0SDIwVjIwSDIyVjE5SDE4LjZDMTUuNSAxOSAxMyAxNi41IDEzIDEzLjRWOFpNMTkgMTdIMjFWMTVIMTlWMTdaTTEyIDkuMDk5OThWMTMuNEMxMiAxNi44IDE0LjYgMTkuNyAxOCAyMC4xVjIwLjZDMTggMjIgMTUuOCAyMy4xIDEzIDIzLjFDMTAuMiAyMy4xIDggMjIgOCAyMC42VjExLjZDOCAxMC4zIDkuNyA5LjI5OTk4IDEyIDkuMDk5OThaIiBmaWxsPSJ3aGl0ZSIvPiYjeGE7PC9zdmc+;" value="" vertex="1">
+          <mxGeometry height="36" width="32" x="740" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="az_d" parent="1" style="fillColor=#e3ebff;strokeColor=#9db9ff;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;verticalAlign=top;align=center;fontSize=15;fontStyle=1;spacingTop=6;" value="Зона доступности ru-central1-d" vertex="1">
+          <mxGeometry height="620" width="386" x="1132" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="cl_d" parent="1" style="fillColor=none;strokeColor=#5282ff;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;verticalAlign=top;align=left;fontSize=12;fontStyle=1;spacingTop=6;" value="" vertex="1">
+          <mxGeometry height="300" width="356" x="1147" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="k8s_d" parent="1" style="shape=image;imageAspect=0;aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=group;container=0;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="1156" y="442" as="geometry" />
+        </mxCell>
+        <mxCell id="cllbl_d" parent="1" style="text;html=1;whiteSpace=wrap;fontFamily=Arial;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#1A3A8F;" value="&lt;b&gt;Kubernetes cluster&lt;/b&gt; — node group ru-central1-d" vertex="1">
+          <mxGeometry height="36" width="300" x="1194" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="core_d" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;core-app&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="1157" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="ci_d" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;client-info&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="1330" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="agg_d" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;ins-product-aggregator&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="1157" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="se_d" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=center;verticalAlign=middle;" value="&lt;b&gt;ins-comp-settlement&lt;/b&gt;" vertex="1">
+          <mxGeometry height="72" width="160" x="1330" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="db_d" parent="1" style="fillColor=#ffffff;strokeColor=#ff5958;html=1;whiteSpace=wrap;fontFamily=Arial;rounded=0;fontSize=11;align=left;verticalAlign=middle;spacingLeft=6;" value="&lt;div style=&#39;text-align:left;padding-left:44px&#39;&gt;&lt;b&gt;PostgreSQL&lt;/b&gt; — REPLICA&lt;br&gt;core-db · client-info · settlement&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="356" x="1147" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="pg_d" parent="1" style="shape=image;imageAspect=0;aspect=fixed;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIiBmaWxsPSJub25lIj4mI3hhOzxwYXRoIGQ9Ik0wIDE2QzAgNy4xNjM0NCA3LjE2MzQ0IDAgMTYgMFYwQzI0LjgzNjYgMCAzMiA3LjE2MzQ0IDMyIDE2VjE2QzMyIDI0LjgzNjYgMjQuODM2NiAzMiAxNiAzMlYzMkM3LjE2MzQ0IDMyIDAgMjQuODM2NiAwIDE2VjE2WiIgZmlsbD0iIzUyODJGRiIvPiYjeGE7PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMyA4SDE4QzIxLjMgOCAyNCAxMC43IDI0IDE0VjI0SDIwVjIwSDIyVjE5SDE4LjZDMTUuNSAxOSAxMyAxNi41IDEzIDEzLjRWOFpNMTkgMTdIMjFWMTVIMTlWMTdaTTEyIDkuMDk5OThWMTMuNEMxMiAxNi44IDE0LjYgMTkuNyAxOCAyMC4xVjIwLjZDMTggMjIgMTUuOCAyMy4xIDEzIDIzLjFDMTAuMiAyMy4xIDggMjIgOCAyMC42VjExLjZDOCAxMC4zIDkuNyA5LjI5OTk4IDEyIDkuMDk5OThaIiBmaWxsPSJ3aGl0ZSIvPiYjeGE7PC9zdmc+;" value="" vertex="1">
+          <mxGeometry height="36" width="32" x="1156" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="note_0" parent="1" style="shape=note;html=1;whiteSpace=wrap;fontFamily=Arial;fillColor=#FFF7D6;strokeColor=#D6B000;align=left;verticalAlign=top;spacing=10;fontSize=13;fontColor=#333333;size=20;" value="&lt;b&gt;1. Масштабирование и зоны&lt;/b&gt;&lt;br&gt;&lt;br&gt;Горизонтальное масштабирование (HPA/VPA) вместо вертикального: нет потолка ресурсов, распределение пиков 50 RPS поиска и 10 RPS оформления, отказ узла/зоны не роняет сервис. Работаем в 3 зонах доступности, а не в одной." vertex="1">
+          <mxGeometry height="95" width="900" x="40" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="note_1" parent="1" style="shape=note;html=1;whiteSpace=wrap;fontFamily=Arial;fillColor=#FFF7D6;strokeColor=#D6B000;align=left;verticalAlign=top;spacing=10;fontSize=13;fontColor=#333333;size=20;" value="&lt;b&gt;2. Kubernetes: один кластер (stretched)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Один управляемый кластер с node group в каждой из 3 зон. Pod anti-affinity раскидывает реплики сервисов по зонам. Отдельные кластеры на зону избыточны." vertex="1">
+          <mxGeometry height="95" width="900" x="40" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="note_2" parent="1" style="shape=note;html=1;whiteSpace=wrap;fontFamily=Arial;fillColor=#FFF7D6;strokeColor=#D6B000;align=left;verticalAlign=top;spacing=10;fontSize=13;fontColor=#333333;size=20;" value="&lt;b&gt;3. Балансировка и health checks&lt;/b&gt;&lt;br&gt;&lt;br&gt;L7 Load Balancer распределяет трафик между сервисами и зонами; CDN + Object Storage отдают статику с edge → одинаковое время загрузки во всех регионах. Health checks: DNS → LB, LB → /health, K8s readiness/liveness. Партнёрский API — через Gateway с квотой 20 RPS." vertex="1">
+          <mxGeometry height="95" width="900" x="40" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="note_3" parent="1" style="shape=note;html=1;whiteSpace=wrap;fontFamily=Arial;fillColor=#FFF7D6;strokeColor=#D6B000;align=left;verticalAlign=top;spacing=10;fontSize=13;fontColor=#333333;size=20;" value="&lt;b&gt;4. Данные: HA и бэкапы (RTO 45 / RPO 15)&lt;/b&gt;&lt;br&gt;&lt;br&gt;PostgreSQL HA: master + 2 синхронные реплики в разных зонах, авто-failover (&lt; 1–2 мин) → RTO. Sync-репликация + WAL (PITR) в Object Storage → RPO ≤ 15 мин. Ежедневный полный бэкап. Шардирование не нужно: 50 ГБ и 50/10 RPS покрываются одним HA-кластером." vertex="1">
+          <mxGeometry height="95" width="900" x="40" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="e_client_dns" edge="1" parent="1" source="client" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="dns" value="DNS">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_client_cdn" edge="1" parent="1" source="client" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="cdn" value="статика (SPA)">
+          <mxGeometry relative="1" x="-0.1228" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="150" y="310" />
+              <mxPoint x="600" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_dns_alb" edge="1" parent="1" source="dns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#00A63E;fontColor=#00702A;fontSize=11;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="alb" value="health-check · failover">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="140" />
+              <mxPoint x="1070" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cdn_static" edge="1" parent="1" source="cdn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="static" value="origin">
+          <mxGeometry relative="1" x="-0.04" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="600" y="180" />
+              <mxPoint x="810" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_partners_apigw" edge="1" parent="1" source="partners" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="apigw" value="REST">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1580" y="240" />
+              <mxPoint x="1580" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_apigw_alb" edge="1" parent="1" source="apigw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;startArrow=block;startFill=1;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="alb" value="маршрутизация">
+          <mxGeometry relative="1" x="-0.0345" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1340" y="180" />
+              <mxPoint x="1090" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_alb_cl_a" edge="1" parent="1" source="alb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#00A63E;fontColor=#00702A;fontSize=11;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="cl_a" value="HTTP(S) · HC /health">
+          <mxGeometry relative="1" x="-0.5601" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1020" y="320" />
+              <mxPoint x="493" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_cl_db_a" edge="1" parent="1" source="cl_a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="db_a" value="TCP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_alb_cl_b" edge="1" parent="1" source="alb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#00A63E;fontColor=#00702A;fontSize=11;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="cl_b" value="HTTP(S) · HC /health">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cl_db_b" edge="1" parent="1" source="cl_b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="db_b" value="TCP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_alb_cl_d" edge="1" parent="1" source="alb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#00A63E;fontColor=#00702A;fontSize=11;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="cl_d" value="HTTP(S) · HC /health">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cl_db_d" edge="1" parent="1" source="cl_d" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="db_d" value="TCP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rep_b" edge="1" parent="1" source="db_a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#0F7B2E;fontColor=#0A5C22;fontSize=11;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="db_b" value="sync replication">
+          <mxGeometry relative="1" x="-0.0043" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="493" y="930" />
+              <mxPoint x="909" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_rep_d" edge="1" parent="1" source="db_a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#0F7B2E;fontColor=#0A5C22;fontSize=11;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="db_d" value="sync replication">
+          <mxGeometry relative="1" x="0.0021" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="493" y="960" />
+              <mxPoint x="1325" y="960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_backup" edge="1" parent="1" source="db_a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;strokeColor=#B36B00;fontColor=#8A5200;fontSize=11;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="static" value="backup / PITR">
+          <mxGeometry relative="1" x="0.0968" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="270" y="857.5" />
+              <mxPoint x="270" y="350" />
+              <mxPoint x="810" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_payment" edge="1" parent="1" source="cl_d" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="payment" value="REST · оплата">
+          <mxGeometry relative="1" x="-0.0966" y="8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_insurers" edge="1" parent="1" source="cl_d" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;strokeColor=#555555;fontColor=#333333;labelBackgroundColor=#FFFFFF;fontFamily=Arial;" target="insurers" value="REST / SOAP / GraphQL">
+          <mxGeometry relative="1" x="-0.3509" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1850" y="585" />
+              <mxPoint x="1850" y="815" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
